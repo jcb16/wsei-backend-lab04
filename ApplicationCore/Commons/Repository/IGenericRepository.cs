@@ -1,15 +1,15 @@
 ﻿using ApplicationCore.Interfaces.Criteria;
 
-namespace ApplicationCore.Interfaces.Repository;
+namespace ApplicationCore.Commons.Repository;
 
 public interface IGenericRepository<T, K> where T: IIdentity<K> where K : IComparable<K>
 {
     Task<T?> FindByIdAsync(K id);
-    Task<List<T>> FindAllAsync();
+    Task<IQueryable<T>> FindAllAsync();
 
     T? FindById(K id);
 
-    List<T> FindAll();
+    IQueryable<T> FindAll();
     T Add(T o);
     
     void RemoveById(K id);

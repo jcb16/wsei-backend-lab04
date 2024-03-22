@@ -20,7 +20,7 @@ public class IndexModel : PageModel
     
     public void OnGet()
     {
-        Quizzes = _quizUserService.FindAll();
+        Quizzes = _quizUserService.FindAll().ToList();
 
     }
 }

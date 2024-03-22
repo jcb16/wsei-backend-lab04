@@ -1,7 +1,7 @@
-﻿using ApplicationCore.Interfaces.Criteria;
-using ApplicationCore.Interfaces.Repository;
+﻿using ApplicationCore.Commons.Repository;
+using ApplicationCore.Interfaces.Criteria;
 
-namespace Infrastructure.Memory.Repository;
+namespace Infrastructure.Memory.Repositories;
 
 public class MemoryGenericRepository<T, K>:IGenericRepository<T, K> where T: class, IIdentity<K> where K : IComparable<K>
 {
@@ -11,7 +11,6 @@ public class MemoryGenericRepository<T, K>:IGenericRepository<T, K> where T: cla
     {
         _idGenerator = idGenerator;
     }
-
 
     private Dictionary<K, T> _data = new();
 
@@ -25,19 +24,19 @@ public class MemoryGenericRepository<T, K>:IGenericRepository<T, K> where T: cla
         return Task.FromResult(_data.ContainsKey(id) ? _data[id] : null);
     }
 
-    public Task<List<T>> FindAllAsync()
+    public Task<IQueryable<T>> FindAllAsync()
     {
-        return Task.FromResult(_data.Values.ToList());
+        return Task.FromResult(_data.Values.AsQueryable());
     }
 
     public T? FindById(K id)
     {
-        return _data.TryGetValue(id, out var  value) ? value : null;
+        return _data.GetValueOrDefault(id);
     }
 
-    public List<T> FindAll()
+    public IQueryable<T> FindAll()
     {
-        return _data.Values.ToList();
+        return _data.Values.AsQueryable();
     }
 
     public T Add(T entity)

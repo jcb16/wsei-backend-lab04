@@ -1,4 +1,5 @@
-﻿using ApplicationCore.Interfaces.UserService;
+﻿using ApplicationCore.Commons.Specification;
+using ApplicationCore.Interfaces.UserService;
 using ApplicationCore.Models.QuizAggregate;
 
 namespace ApplicationCore.Interfaces.Criteria;

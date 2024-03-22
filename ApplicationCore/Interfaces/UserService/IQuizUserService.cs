@@ -1,5 +1,4 @@
-﻿using ApplicationCore.Interfaces.Repository;
-using ApplicationCore.Models;
+﻿using ApplicationCore.Models;
 using ApplicationCore.Models.QuizAggregate;
 
 namespace ApplicationCore.Interfaces.UserService;
@@ -10,11 +9,11 @@ public interface IQuizUserService
 
     Quiz? FindQuizById(int id);
 
-    List<Quiz> FindAll();
+    IQueryable<Quiz> FindAll();
 
     void SaveUserAnswerForQuiz(int quizId, int userId, int quizItemId, string answer);
 
-    List<QuizItemUserAnswer> GetUserAnswersForQuiz(int quizId, int userId);
+    IQueryable<QuizItemUserAnswer> GetUserAnswersForQuiz(int quizId, int userId);
 
     int CountCorrectAnswersForQuizFilledByUser(int quizId, int userId)
     {

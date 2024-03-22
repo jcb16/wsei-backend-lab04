@@ -1,4 +1,4 @@
-﻿using ApplicationCore.Interfaces.Repository;
+﻿using ApplicationCore.Commons.Repository;
 using ApplicationCore.Models.QuizAggregate;
 
 namespace Web;
@@ -14,17 +14,31 @@ public static class SeedData
             var quizItemRepo = provider.GetService<IGenericRepository<QuizItem, int>>();
             List<QuizItem> quizItems = new List<QuizItem>();
             
-            quizItems.Add(quizItemRepo.Add(new QuizItem(id: 1, correctAnswer: "5", question: "3 + 2",
-                incorrectAnswers: new List<string>() {"2", "3", "4"})));
+            var item1 = quizItemRepo?.Add(new QuizItem()
+            {
+                Id = 1,
+                CorrectAnswer = "5",
+                Question = "3 + 2",
+                IncorrectAnswers = new List<string>() { "2", "3", "4" }
+            });
 
-            quizItems.Add(quizItemRepo.Add(new QuizItem(id: 2, correctAnswer: "6", question: "3 * 2",
-                incorrectAnswers: new List<string>() {"2", "3", "7"})));
-            
-            quizItems.Add(quizItemRepo.Add(new QuizItem(id: 3, correctAnswer: "1", question: "3 - 2",
-                incorrectAnswers: new List<string>() {"2", "3", "6"})));
+            var item2 = quizItemRepo?.Add(new QuizItem()
+            {
+                Id = 2,
+                CorrectAnswer = "8",
+                Question = "4 * 2",
+                IncorrectAnswers = new List<string>() { "10", "6", "4" }
+            });
 
-            quizRepo.Add(new Quiz(id: 1, items: quizItems, title: "Matematyka"));
-            
+            quizRepo?.Add(new Quiz()
+            {
+                Id = 1,
+                Items = new List<QuizItem>()
+                {
+                    item1,
+                    item2
+                }
+            });
         }
     }
 }

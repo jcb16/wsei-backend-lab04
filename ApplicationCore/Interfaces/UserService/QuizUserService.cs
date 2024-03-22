@@ -1,5 +1,5 @@
-﻿using ApplicationCore.Interfaces.Criteria;
-using ApplicationCore.Interfaces.Repository;
+﻿using ApplicationCore.Commons.Repository;
+using ApplicationCore.Interfaces.Criteria;
 using ApplicationCore.Models;
 using ApplicationCore.Models.QuizAggregate;
 
@@ -28,9 +28,9 @@ public class QuizUserService: IQuizUserService
         return quizRepository.FindById(id);
     }
 
-    public List<Quiz> FindAll()
+    public IQueryable<Quiz> FindAll()
     {
-        return quizRepository.FindAll();
+        return quizRepository.FindAll().AsQueryable();
     }
 
     public void SaveUserAnswerForQuiz(int quizId, int userId, int quizItemId, string answer)
@@ -41,12 +41,12 @@ public class QuizUserService: IQuizUserService
     }
 
 
-    public List<QuizItemUserAnswer> GetUserAnswersForQuiz(int quizId, int userId)
+    public IQueryable<QuizItemUserAnswer> GetUserAnswersForQuiz(int quizId, int userId)
     {
         // return answerRepository.FindAll()
         //     .Where(x => x.QuizId == quizId)
         //     .Where(x => x. UserId == userId)
         //     .ToList();
-        return answerRepository.FindBySpecification(new QuizItemsForQuizIdFilledByUser(quizId, userId)).ToList();
+        return answerRepository.FindBySpecification(new QuizItemsForQuizIdFilledByUser(quizId, userId)).AsQueryable();
     }
 }

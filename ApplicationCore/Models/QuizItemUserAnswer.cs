@@ -1,4 +1,4 @@
-﻿using ApplicationCore.Interfaces.Repository;
+﻿using ApplicationCore.Commons.Repository;
 using ApplicationCore.Models.QuizAggregate;
 
 namespace ApplicationCore.Models;
@@ -24,7 +24,7 @@ public class QuizItemUserAnswer: IIdentity<string>
 
     public string Id
     {
-        get => $"{QuizId}{UserId}{QuizItem.Id}";
+        get => $"{QuizId}-{UserId}-{QuizItem.Id}";
         set
         {
             

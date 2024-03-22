@@ -1,4 +1,5 @@
 ﻿using System.Linq.Expressions;
+using ApplicationCore.Commons.Specification;
 using ApplicationCore.Interfaces.UserService;
 using ApplicationCore.Models;
 
