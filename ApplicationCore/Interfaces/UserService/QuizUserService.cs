@@ -43,10 +43,6 @@ public class QuizUserService: IQuizUserService
 
     public IQueryable<QuizItemUserAnswer> GetUserAnswersForQuiz(int quizId, int userId)
     {
-        // return answerRepository.FindAll()
-        //     .Where(x => x.QuizId == quizId)
-        //     .Where(x => x. UserId == userId)
-        //     .ToList();
         return answerRepository.FindBySpecification(new QuizItemsForQuizIdFilledByUser(quizId, userId)).AsQueryable();
     }
 }
