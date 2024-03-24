@@ -24,9 +24,8 @@ public class QuizAdminService : IQuizAdminService
         {
             throw new Exception();
         }
-
         var newItem = itemRepository.Add(item);
-        quiz.Items.Add(item);
+        quiz.Items.Add(newItem);
         quizRepository.Update(quizId, quiz);
         return newItem;
     }

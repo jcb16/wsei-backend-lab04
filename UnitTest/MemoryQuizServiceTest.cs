@@ -16,7 +16,7 @@ public class MemoryQuizServiceTest
         new MemoryGenericRepository<QuizItem, int>(new IntGenerator());
 
     private IGenericRepository<QuizItemUserAnswer, string> answerRepository =
-        new MemoryGenericRepository<QuizItemUserAnswer, string>();
+        new MemoryGenericRepository<QuizItemUserAnswer, string>(null);
 
     private IQuizAdminService _aservice;
     private IQuizUserService _uservice;
