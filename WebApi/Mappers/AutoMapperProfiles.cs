@@ -1,3 +1,4 @@
+using ApplicationCore.Models;
 using ApplicationCore.Models.QuizAggregate;
 using AutoMapper;
 using WebApi.Dto;
@@ -18,6 +19,5 @@ public class AutoMapperProfiles: Profile
                 q => q.Items,
                 op => op.MapFrom<List<QuizItem>>(i => i.Items)
             );
-        CreateMap<NewQuizDto, Quiz>();
     }
 }

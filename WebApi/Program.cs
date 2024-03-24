@@ -3,6 +3,7 @@ using ApplicationCore.Interfaces.AdminService;
 using ApplicationCore.Interfaces.UserService;
 using ApplicationCore.Models;
 using ApplicationCore.Models.QuizAggregate;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using Infrastructure.Memory;
 using Infrastructure.Memory.Repositories;
