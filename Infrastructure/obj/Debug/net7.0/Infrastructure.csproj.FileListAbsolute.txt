@@ -1,0 +1,16 @@
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\bin\Debug\net7.0\Infrastructure.deps.json
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\bin\Debug\net7.0\Infrastructure.dll
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\bin\Debug\net7.0\Infrastructure.pdb
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\bin\Debug\net7.0\ApplicationCore.dll
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\bin\Debug\net7.0\ApplicationCore.pdb
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.AssemblyReference.cache
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\obj\Debug\net7.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfoInputs.cache
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfo.cs
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\obj\Debug\net7.0\Infrastructure.sourcelink.json
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\obj\Debug\net7.0\Infrastr.15EFFBFE.Up2Date
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\obj\Debug\net7.0\Infrastructure.dll
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
+D:\Users\jakub.kolber\RiderProjects\wsei-backend-lab04\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
