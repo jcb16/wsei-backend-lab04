@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qjBvzUx+46BWyqpJmJU6+Gved3JPZlbSve1ZhOOzgrTYU9gW3rnVuv8RyNDj1a6T9iuiUz7TkFOkksU8PUKtsQ==",
+  "dgSpecHash": "OSH67JLMb2OFixmKIc5hg0L1eJLGdV+DJkgBysrnbOUnEVJda19K/yKeDrMYrC5OnF9wCtO+Wsg5JcQ0sgBDVQ==",
   "success": true,
-  "projectFilePath": "D:\\Users\\jakub.kolber\\RiderProjects\\wsei-backend-lab04\\ApplicationCore\\ApplicationCore.csproj",
+  "projectFilePath": "C:\\Users\\kubek\\source\\repos\\jcb16\\wsei-backend-lab04\\ApplicationCore\\ApplicationCore.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -6656,19 +6656,24 @@
     ]
   },
   "packageFolders": {
-    "D:\\Users\\jakub.kolber\\.nuget\\packages\\": {}
+    "C:\\Users\\kubek\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\jakub.kolber\\RiderProjects\\wsei-backend-lab04\\UnitTest\\UnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\kubek\\source\\repos\\jcb16\\wsei-backend-lab04\\UnitTest\\UnitTest.csproj",
       "projectName": "UnitTest",
-      "projectPath": "D:\\Users\\jakub.kolber\\RiderProjects\\wsei-backend-lab04\\UnitTest\\UnitTest.csproj",
-      "packagesPath": "D:\\Users\\jakub.kolber\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\jakub.kolber\\RiderProjects\\wsei-backend-lab04\\UnitTest\\obj\\",
+      "projectPath": "C:\\Users\\kubek\\source\\repos\\jcb16\\wsei-backend-lab04\\UnitTest\\UnitTest.csproj",
+      "packagesPath": "C:\\Users\\kubek\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kubek\\source\\repos\\jcb16\\wsei-backend-lab04\\UnitTest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "D:\\Users\\jakub.kolber\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kubek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6682,11 +6687,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Users\\jakub.kolber\\RiderProjects\\wsei-backend-lab04\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "D:\\Users\\jakub.kolber\\RiderProjects\\wsei-backend-lab04\\ApplicationCore\\ApplicationCore.csproj"
+            "C:\\Users\\kubek\\source\\repos\\jcb16\\wsei-backend-lab04\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "C:\\Users\\kubek\\source\\repos\\jcb16\\wsei-backend-lab04\\ApplicationCore\\ApplicationCore.csproj"
             },
-            "D:\\Users\\jakub.kolber\\RiderProjects\\wsei-backend-lab04\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\Users\\jakub.kolber\\RiderProjects\\wsei-backend-lab04\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\kubek\\source\\repos\\jcb16\\wsei-backend-lab04\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\kubek\\source\\repos\\jcb16\\wsei-backend-lab04\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -6743,7 +6748,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

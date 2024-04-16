@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Dto;
 using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using WebApi.Validators;
+using FluentValidation;
 
 namespace WebApi.Controllers;
 
@@ -12,14 +14,16 @@ public class ApiQuizAdminController : Controller
 {
     private IQuizAdminService _service;
     private readonly IMapper _mapper;
+    private readonly IValidator<QuizItem> _quizItemValidator;
 
-    public ApiQuizAdminController(IQuizAdminService service, IMapper mapper)
+    public ApiQuizAdminController(IQuizAdminService service, IMapper mapper, IValidator<QuizItem> quizItemValidator)
     {
         _service = service;
         _mapper = mapper;
+        _quizItemValidator = quizItemValidator;
     }
-    
-    
+
+
     [HttpPost]
     public ActionResult<object> AddQuiz(LinkGenerator link, NewQuizDto dto)
     {
@@ -63,6 +67,30 @@ public class ApiQuizAdminController : Controller
         {
             return BadRequest(ModelState);
         }
+
+        foreach (var item in patchDoc.Operations)
+        {
+            if (item.path.EndsWith("/Question"))
+            {
+                var question = item.value?.ToString();
+                var quizItem = new QuizItem { Question = question };
+                var validationResult = _quizItemValidator.Validate(quizItem);
+                if (!validationResult.IsValid)
+                {
+                    return BadRequest(validationResult.Errors);
+                }
+            }
+        }
+
+        //{
+        //    "op": "add",
+        //"path": "/Items",
+        //"value": {
+        //        "Question": "Nowe pytanie",
+        //    "CorrectAnswer": "Poprawna odpowiedź",
+        //    "IncorrectAnswers": ["Niepoprawna odpowiedź 1", "Niepoprawna odpowiedź 2"]
+        //}
+
         if (previousCount < quiz.Items.Count)
         {
             QuizItem item = quiz.Items[^1];
@@ -71,4 +99,5 @@ public class ApiQuizAdminController : Controller
         }
         return Ok(_service.FindAllQuizzes().FirstOrDefault(q => q.Id == quizId));
     }
+
 }

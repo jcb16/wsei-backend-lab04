@@ -48,3 +48,37 @@ Content-Type: application/json-patch+json
     }
   }
 ]
+
+###
+
+PATCH {{WebApi_HostAddress}}/api/ApiQuizAdmin/1
+Content-Type: application/json-patch+json
+
+[
+  {
+    "op": "add",
+    "path": "/items/-",
+    "value": {
+      "qestion": "2 + 5",
+      "options": ["2", "3", "4", "6", "7"],
+      "correctOptionIndex": 4
+    }
+  }
+]
+
+###
+
+PATCH {{WebApi_HostAddress}}/api/ApiQuizAdmin/1
+Content-Type: application/json-patch+json
+
+[
+  {
+    "op": "add",
+    "path": "/items/-",
+    "value": {
+      "qestion": "2 + 5",
+      "options": ["2", "3", "6", "7"],
+      "correctOptionIndex": 4
+    }
+  }
+]
